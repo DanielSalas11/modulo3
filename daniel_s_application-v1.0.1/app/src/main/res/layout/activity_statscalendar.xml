@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="statscalendarVM" type="com.danielsapplication.app.modules.statscalendar.data.viewmodel.StatscalendarVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnbitacora"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearStatstwo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtBitacora"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{statscalendarVM.statscalendarModel.txtBitacora}"
+                    style="@style/txtMontserratromanbold25_1" tools:text="@string/lbl_bitacora"/>
+                <com.google.android.material.tabs.TabLayout
+                    android:gravity="center_horizontal"
+                    android:id="@+id/tabLayoutTabview"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_26pxv"
+                    android:layout_width="match_parent"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/white_A700" app:tabTextColor="@color/indigo_900"/>
+                <androidx.viewpager2.widget.ViewPager2
+                    android:gravity="center_horizontal"
+                    android:id="@+id/viewPagerViewpager"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_width="match_parent"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

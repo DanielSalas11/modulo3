@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="statsVM" type="com.danielsapplication.app.modules.stats.data.viewmodel.StatsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnThree"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <FrameLayout android:id="@+id/frameStats"
+                android:layout_height="@dimen/_676pxv"
+                android:layout_marginBottom="@dimen/_22pxv" android:layout_width="match_parent">
+                <LinearLayout android:id="@+id/linearColumn"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_57pxv"
+                    android:layout_marginEnd="@dimen/_1pxh"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingEnd="@dimen/_10pxh"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_16pxv" style="@style/groupStylegray_50">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearCard"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_77pxv"
+                        android:layout_marginEnd="@dimen/_2pxh"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_11pxv"
+                        android:paddingEnd="@dimen/_2pxh"
+                        android:paddingStart="@dimen/_2pxh"
+                        android:paddingTop="@dimen/_11pxv" style="@style/groupStylewhite_A700cornerRadius">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnnoruega"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_23pxh"
+                            android:layout_marginTop="@dimen/_3pxv"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_9pxv"
+                            android:paddingEnd="@dimen/_15pxh"
+                            android:paddingStart="@dimen/_15pxh"
+                            android:paddingTop="@dimen/_9pxv" style="@style/groupStylepink_A200cornerRadius">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtNoruega"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_1pxv"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{statsVM.statsModel.txtNoruega}"
+                                style="@style/txtRobotomedium15" tools:text="@string/lbl_alegr_a"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnaustralia"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_30pxh"
+                            android:layout_marginStart="@dimen/_23pxh"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_8pxv"
+                            android:paddingEnd="@dimen/_15pxh"
+                            android:paddingStart="@dimen/_15pxh"
+                            android:paddingTop="@dimen/_8pxv" style="@style/groupStylepurple_500cornerRadius">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtAustralia"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_2pxv"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{statsVM.statsModel.txtAustralia}"
+                                style="@style/txtRobotomedium15" tools:text="@string/lbl_verg_enza"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnsuiza"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_59pxh"
+                            android:layout_marginStart="@dimen/_23pxh"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_8pxv"
+                            android:paddingEnd="@dimen/_15pxh"
+                            android:paddingStart="@dimen/_15pxh"
+                            android:paddingTop="@dimen/_8pxv" style="@style/groupStylepurple_700cornerRadius">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtSuiza"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_2pxv"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{statsVM.statsModel.txtSuiza}"
+                                style="@style/txtRobotomedium15" tools:text="@string/lbl_enojo"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnpasesbajo"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_86pxh"
+                            android:layout_marginStart="@dimen/_23pxh"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_8pxv"
+                            android:paddingEnd="@dimen/_15pxh"
+                            android:paddingStart="@dimen/_15pxh"
+                            android:paddingTop="@dimen/_8pxv" style="@style/groupStylepurple_800cornerRadius">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtPasesbajos"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_2pxv"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{statsVM.statsModel.txtPasesbajos}"
+                                style="@style/txtRobotomedium15" tools:text="@string/lbl_sorpresa"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnestadosun"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_115pxh"
+                            android:layout_marginStart="@dimen/_23pxh"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_9pxv"
+                            android:paddingEnd="@dimen/_15pxh"
+                            android:paddingStart="@dimen/_15pxh"
+                            android:paddingTop="@dimen/_9pxv" style="@style/groupStyledeep_purple_800cornerRadius">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtEstadosunidos"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/_1pxv"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{statsVM.statsModel.txtEstadosunidos}"
+                                style="@style/txtRobotomedium15" tools:text="@string/lbl_miedo"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnalemania"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_123pxh"
+                            android:layout_marginStart="@dimen/_23pxh"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_9pxv"
+                            android:paddingEnd="@dimen/_15pxh"
+                            android:paddingStart="@dimen/_15pxh"
+                            android:paddingTop="@dimen/_9pxv" style="@style/groupStyledeep_purple_900cornerRadius">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtAlemania"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/_1pxv"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{statsVM.statsModel.txtAlemania}"
+                                style="@style/txtRobotomedium15" tools:text="@string/lbl_confusi_n"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnnuevazela"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_177pxh"
+                            android:layout_marginStart="@dimen/_23pxh"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_9pxv"
+                            android:paddingEnd="@dimen/_15pxh"
+                            android:paddingStart="@dimen/_15pxh"
+                            android:paddingTop="@dimen/_9pxv" style="@style/groupStyleindigo_500cornerRadius">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtNuevazelanda"
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{statsVM.statsModel.txtNuevazelanda}"
+                                style="@style/txtRobotomedium15" tools:text="@string/lbl_tristeza"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumncanad"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_209pxh"
+                            android:layout_marginStart="@dimen/_23pxh"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_9pxv"
+                            android:paddingEnd="@dimen/_15pxh"
+                            android:paddingStart="@dimen/_15pxh"
+                            android:paddingTop="@dimen/_9pxv" style="@style/groupStyleindigo_A400cornerRadius">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtCanad"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/_1pxv"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{statsVM.statsModel.txtCanad}"
+                                style="@style/txtRobotomedium15" tools:text="@string/lbl_calma"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearColumnlinenine"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearColumnstats"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="vertical">
+                        <FrameLayout android:id="@+id/frameStackstats"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_31pxv"
+                            android:layout_marginStart="@dimen/_10pxh" android:layout_width="@dimen/_67pxh">
+                            <TextView android:ellipsize="end"
+                                android:gravity="top|start"
+                                android:id="@+id/txtStats"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{statsVM.statsModel.txtStats}"
+                                style="@style/txtMontserratromanbold25_1" tools:text="@string/lbl_stats"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="top|start"
+                                android:id="@+id/txtStatsOne"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{statsVM.statsModel.txtStatsOne}"
+                                style="@style/txtMontserratromanbold25_1" tools:text="@string/lbl_stats"/>
+                        </FrameLayout>
+                        <LinearLayout android:gravity="center_vertical"
+                            android:id="@+id/linearRowday"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_marginStart="@dimen/_14pxh"
+                            android:layout_marginTop="@dimen/_27pxv"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <FrameLayout android:id="@+id/frameStackday"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_29pxv" android:layout_width="@dimen/_78pxh">
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtDay"
+                                    android:layout_gravity="bottom|start"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_4pxv"
+                                    android:layout_marginStart="@dimen/_22pxh"
+                                    android:layout_width="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtDay}"
+                                    style="@style/txtMontserratromanregular14_1" tools:text="@string/lbl_day"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="top|start"
+                                    android:id="@+id/txtDayOne"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:paddingBottom="@dimen/_4pxv"
+                                    android:paddingEnd="@dimen/_22pxh"
+                                    android:paddingStart="@dimen/_22pxh"
+                                    android:paddingTop="@dimen/_4pxv"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtDayOne}"
+                                    style="@style/txtSolidRounded" tools:text="@string/lbl_day"/>
+                            </FrameLayout>
+                            <FrameLayout
+                                android:id="@+id/frameStackweek"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_29pxv"
+                                android:layout_marginStart="@dimen/_8pxh" android:layout_width="@dimen/_78pxh">
+                                <TextView android:ellipsize="end"
+                                    android:gravity="top|start"
+                                    android:id="@+id/txtWeek"
+                                    android:layout_gravity="top|center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_4pxv"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtWeek}"
+                                    style="@style/txtMontserratromanregular14_1" tools:text="@string/lbl_week"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="top|start"
+                                    android:id="@+id/txtWeekOne"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:paddingBottom="@dimen/_4pxv"
+                                    android:paddingEnd="@dimen/_18pxh"
+                                    android:paddingStart="@dimen/_18pxh"
+                                    android:paddingTop="@dimen/_4pxv"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtWeekOne}"
+                                    style="@style/txtSolidRounded" tools:text="@string/lbl_week"/>
+                            </FrameLayout>
+                            <FrameLayout
+                                android:id="@+id/frameStackmonth"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_29pxv"
+                                android:layout_marginStart="@dimen/_8pxh" android:layout_width="@dimen/_78pxh">
+                                <TextView android:ellipsize="end"
+                                    android:gravity="top|start"
+                                    android:id="@+id/txtMonth"
+                                    android:layout_gravity="top|center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_4pxv"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtMonth}"
+                                    style="@style/txtMontserratromanregular14_2" tools:text="@string/lbl_month"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="top|start"
+                                    android:id="@+id/txtMonthOne"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:paddingBottom="@dimen/_4pxv"
+                                    android:paddingEnd="@dimen/_14pxh"
+                                    android:paddingStart="@dimen/_14pxh"
+                                    android:paddingTop="@dimen/_4pxv"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtMonthOne}"
+                                    style="@style/txtSolidRounded_1" tools:text="@string/lbl_month"/>
+                            </FrameLayout>
+                            <FrameLayout
+                                android:id="@+id/frameStackyear"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_29pxv"
+                                android:layout_marginStart="@dimen/_8pxh" android:layout_width="@dimen/_78pxh">
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtYear"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtYear}"
+                                    style="@style/txtMontserratromanregular14_1" tools:text="@string/lbl_year"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="top|start"
+                                    android:id="@+id/txtYearOne"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:paddingBottom="@dimen/_5pxv"
+                                    android:paddingEnd="@dimen/_23pxh"
+                                    android:paddingStart="@dimen/_23pxh"
+                                    android:paddingTop="@dimen/_5pxv"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtYearOne}"
+                                    style="@style/txtSolidRounded" tools:text="@string/lbl_year"/>
+                            </FrameLayout>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center_vertical"
+                            android:id="@+id/linearRowarrowleft"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16pxv"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <ImageButton
+                                android:background="@drawable/rectangle_bg_indigo_a700_radius_12"
+                                android:id="@+id/btnArrowleftOne"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_24pxh"
+                                android:layout_width="@dimen/_24pxh"
+                                android:paddingHorizontal="@dimen/_7pxh"
+                                android:paddingVertical="@dimen/_7pxv"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+                            <FrameLayout
+                                android:id="@+id/frameStackmarchcount"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_18pxv"
+                                android:layout_marginBottom="@dimen/_3pxv"
+                                android:layout_marginStart="@dimen/_43pxh"
+                                android:layout_marginTop="@dimen/_2pxv" android:layout_width="@dimen/_84pxh">
+                                <TextView android:ellipsize="end"
+                                    android:gravity="top|start"
+                                    android:id="@+id/txtMarchCounter"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtMarchCounter}"
+                                    style="@style/txtMontserratromansemibold14" tools:text="@string/lbl_march_2024"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="top|start"
+                                    android:id="@+id/txtMarchCounter1"
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtMarchCounter1}"
+                                    style="@style/txtMontserratromansemibold14" tools:text="@string/lbl_march_2024"/>
+                            </FrameLayout>
+                            <ImageButton
+                                android:background="@drawable/rectangle_bg_indigo_a700_radius_12"
+                                android:id="@+id/btnArrowleftThree"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_24pxh"
+                                android:layout_marginStart="@dimen/_42pxh"
+                                android:layout_width="@dimen/_24pxh"
+                                android:paddingHorizontal="@dimen/_7pxh"
+                                android:paddingVertical="@dimen/_7pxv"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/img_arrow_left_white_a700" tools:ignore="ContentDescription"/>
+                        </LinearLayout>
+                        <View android:background="@color/indigo_900_70"
+                            android:id="@+id/lineLinesevenOne"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_1pxv"
+                            android:layout_marginTop="@dimen/_9pxv" android:layout_width="@dimen/_359pxh"/>
+                        <View android:background="@color/indigo_900_70"
+                            android:id="@+id/lineLineeightOne"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_359pxh"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="end"
+                        android:id="@+id/linearColumntusemocio"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingEnd="@dimen/_10pxh"
+                        android:paddingStart="@dimen/_10pxh"
+                        android:paddingTop="@dimen/_20pxv" style="@style/groupStylegray_50">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTusemociones"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_89pxh"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{statsVM.statsModel.txtTusemociones}"
+                            style="@style/txtMontserratromanbold16" tools:text="@string/lbl_tus_emociones"/>
+                        <LinearLayout android:gravity="end"
+                            android:id="@+id/linearCard1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10pxv"
+                            android:layout_marginEnd="@dimen/_2pxh"
+                            android:layout_marginTop="@dimen/_19pxv"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_6pxv"
+                            android:paddingEnd="@dimen/_2pxh"
+                            android:paddingStart="@dimen/_2pxh"
+                            android:paddingTop="@dimen/_6pxv" style="@style/groupStylewhite_A700cornerRadius">
+                            <FrameLayout
+                                android:id="@+id/frameStacknoruega"
+                                android:layout_height="@dimen/_305pxv"
+                                android:layout_marginTop="@dimen/_7pxv" android:layout_width="@dimen/_310pxh">
+                                <LinearLayout
+                                    android:id="@+id/linearColumnnoruega1"
+                                    android:layout_gravity="top|center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="@dimen/_9pxv"
+                                    android:paddingEnd="@dimen/_15pxh"
+                                    android:paddingStart="@dimen/_15pxh"
+                                    android:paddingTop="@dimen/_9pxv" style="@style/groupStylepink_A200cornerRadius">
+                                    <TextView android:ellipsize="end"
+                                    android:id="@+id/txtNoruegaOne"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="@dimen/_1pxv"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtNoruegaOne}"
+                                    style="@style/txtRobotomedium15" tools:text="@string/lbl_alegr_a"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/linearColumnOne"
+                                    android:layout_gravity="top|start"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_30pxh"
+                                    android:layout_marginTop="@dimen/_38pxv"
+                                    android:layout_width="match_parent" android:orientation="vertical">
+                                    <LinearLayout
+                                    android:gravity="start"
+                                    android:id="@+id/linearColumnaustralia1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="@dimen/_8pxv"
+                                    android:paddingEnd="@dimen/_15pxh"
+                                    android:paddingStart="@dimen/_15pxh"
+                                    android:paddingTop="@dimen/_8pxv" style="@style/groupStylepurple_500cornerRadius">
+                                    <TextView
+                                    android:ellipsize="end"
+                                    android:id="@+id/txtAustraliaOne"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="@dimen/_2pxv"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtAustraliaOne}"
+                                    style="@style/txtRobotomedium15" tools:text="@string/lbl_verg_enza"/>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                    android:gravity="start"
+                                    android:id="@+id/linearColumnsuizaOne"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_29pxh"
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="@dimen/_8pxv"
+                                    android:paddingEnd="@dimen/_15pxh"
+                                    android:paddingStart="@dimen/_15pxh"
+                                    android:paddingTop="@dimen/_8pxv" style="@style/groupStylepurple_700cornerRadius">
+                                    <TextView
+                                    android:ellipsize="end"
+                                    android:id="@+id/txtSuizaOne"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="@dimen/_2pxv"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtSuizaOne}"
+                                    style="@style/txtRobotomedium15" tools:text="@string/lbl_enojo"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/linearColumnTwo"
+                                    android:layout_gravity="bottom|start"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_77pxv"
+                                    android:layout_marginEnd="@dimen/_86pxh"
+                                    android:layout_width="match_parent" android:orientation="vertical">
+                                    <LinearLayout
+                                    android:gravity="start"
+                                    android:id="@+id/linearColumnpasesbajo1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="@dimen/_8pxv"
+                                    android:paddingEnd="@dimen/_15pxh"
+                                    android:paddingStart="@dimen/_15pxh"
+                                    android:paddingTop="@dimen/_8pxv" style="@style/groupStylepurple_800cornerRadius">
+                                    <TextView
+                                    android:ellipsize="end"
+                                    android:id="@+id/txtPasesbajosOne"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="@dimen/_2pxv"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtPasesbajosOne}"
+                                    style="@style/txtRobotomedium15" tools:text="@string/lbl_sorpresa"/>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                    android:gravity="start"
+                                    android:id="@+id/linearColumnestadosun1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_29pxh"
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="@dimen/_9pxv"
+                                    android:paddingEnd="@dimen/_15pxh"
+                                    android:paddingStart="@dimen/_15pxh"
+                                    android:paddingTop="@dimen/_9pxv" style="@style/groupStyledeep_purple_800cornerRadius">
+                                    <TextView
+                                    android:ellipsize="end"
+                                    android:id="@+id/txtEstadosunidos1"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="@dimen/_1pxv"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtEstadosunidos1}"
+                                    style="@style/txtRobotomedium15" tools:text="@string/lbl_miedo"/>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                    android:gravity="start"
+                                    android:id="@+id/linearColumnalemania1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_37pxh"
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="@dimen/_9pxv"
+                                    android:paddingEnd="@dimen/_15pxh"
+                                    android:paddingStart="@dimen/_15pxh"
+                                    android:paddingTop="@dimen/_9pxv" style="@style/groupStyledeep_purple_900cornerRadius">
+                                    <TextView
+                                    android:ellipsize="end"
+                                    android:id="@+id/txtAlemaniaOne"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="@dimen/_1pxv"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtAlemaniaOne}"
+                                    style="@style/txtRobotomedium15" tools:text="@string/lbl_confusi_n"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/linearColumnnuevazela1"
+                                    android:layout_gravity="bottom|start"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_39pxv"
+                                    android:layout_marginEnd="@dimen/_177pxh"
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="@dimen/_9pxv"
+                                    android:paddingEnd="@dimen/_15pxh"
+                                    android:paddingStart="@dimen/_15pxh"
+                                    android:paddingTop="@dimen/_9pxv" style="@style/groupStyleindigo_500cornerRadius">
+                                    <TextView android:ellipsize="end"
+                                    android:id="@+id/txtNuevazelanda1"
+                                    android:layout_height="match_parent"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtNuevazelanda1}"
+                                    style="@style/txtRobotomedium15" tools:text="@string/lbl_tristeza"/>
+                                </LinearLayout>
+                                <View
+                                    android:background="@drawable/rectangle_bg_indigo_a400_radius_bl_6_br_6"
+                                    android:id="@+id/viewView"
+                                    android:layout_gravity="bottom|start"
+                                    android:layout_height="@dimen/_38pxv"
+                                    android:layout_marginBottom="@dimen/_1pxv" android:layout_width="@dimen/_101pxh"/>
+                                <View
+                                    android:background="@color/black_900_70"
+                                    android:id="@+id/lineLinenineOne"
+                                    android:layout_gravity="start"
+                                    android:layout_height="@dimen/_304pxv" android:layout_width="@dimen/_1pxh"/>
+                                <EditText android:ellipsize="end"
+                                    android:hint="@string/lbl_calma"
+                                    android:id="@+id/etCanad"
+                                    android:inputType="text"
+                                    android:layout_gravity="bottom|center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:paddingEnd="@dimen/_15pxh"
+                                    android:paddingStart="@dimen/_15pxh"
+                                    android:singleLine="true"
+                                    android:text="@={statsVM.statsModel.etCanadValue}"
+                                    android:textColorHint="@color/white_A700"
+                                    style="@style/etRobotomedium15" tools:ignore="Autofill"/>
+                                <View
+                                    android:background="@color/black_900_70"
+                                    android:id="@+id/lineLineelevenOne"
+                                    android:layout_gravity="end"
+                                    android:layout_height="@dimen/_304pxv"
+                                    android:layout_marginEnd="@dimen/_2pxh" android:layout_width="@dimen/_1pxh"/>
+                                <View
+                                    android:background="@color/black_900_70"
+                                    android:id="@+id/lineLinetwelveOne"
+                                    android:layout_gravity="start"
+                                    android:layout_height="@dimen/_304pxv"
+                                    android:layout_marginStart="@dimen/_65pxh" android:layout_width="@dimen/_1pxh"/>
+                                <View
+                                    android:background="@color/black_900_70"
+                                    android:id="@+id/lineLinethirteen"
+                                    android:layout_gravity="start"
+                                    android:layout_height="@dimen/_304pxv"
+                                    android:layout_marginStart="@dimen/_130pxh" android:layout_width="@dimen/_1pxh"/>
+                                <View
+                                    android:background="@color/black_900_70"
+                                    android:id="@+id/lineLinefourteen"
+                                    android:layout_gravity="end"
+                                    android:layout_height="@dimen/_304pxv"
+                                    android:layout_marginEnd="@dimen/_127pxh" android:layout_width="@dimen/_1pxh"/>
+                                <View
+                                    android:background="@color/black_900_70"
+                                    android:id="@+id/lineLinefifteenOne"
+                                    android:layout_gravity="end"
+                                    android:layout_height="@dimen/_304pxv"
+                                    android:layout_marginEnd="@dimen/_67pxh" android:layout_width="@dimen/_1pxh"/>
+                            </FrameLayout>
+                            <LinearLayout android:gravity="end"
+                                android:id="@+id/linearRowzero"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_19pxh"
+                                android:layout_marginTop="@dimen/_1pxv"
+                                android:layout_width="match_parent" android:orientation="horizontal">
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtZero"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtZero}"
+                                    style="@style/txtMontserratromanregular14_1" tools:text="@string/lbl_0"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtTwo"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_51pxh"
+                                    android:layout_width="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtTwo}"
+                                    style="@style/txtMontserratromanregular14_1" tools:text="@string/lbl_2"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtFour"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_57pxh"
+                                    android:layout_width="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtFour}"
+                                    style="@style/txtMontserratromanregular14_1" tools:text="@string/lbl_4"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtSix"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_46pxh"
+                                    android:layout_width="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtSix}"
+                                    style="@style/txtMontserratromanregular14_1" tools:text="@string/lbl_6"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtEight"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_49pxh"
+                                    android:layout_width="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtEight}"
+                                    style="@style/txtMontserratromanregular14_1" tools:text="@string/lbl_8"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtTen"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_48pxh"
+                                    android:layout_width="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="@{statsVM.statsModel.txtTen}"
+                                    style="@style/txtMontserratromanregular14_1" tools:text="@string/lbl_10"/>
+                            </LinearLayout>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtVeces"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_128pxh"
+                                android:layout_marginTop="@dimen/_1pxv"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{statsVM.statsModel.txtVeces}"
+                                style="@style/txtMontserratromanmedium14" tools:text="@string/lbl_veces"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:background="@color/indigo_900_70"
+                        android:id="@+id/lineLinenineThree"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_1pxv"
+                        android:layout_marginTop="@dimen/_27pxv" android:layout_width="@dimen/_360pxh"/>
+                    <FrameLayout android:id="@+id/frameStackmonthTwo"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_29pxv"
+                        android:layout_marginTop="@dimen/_27pxv" android:layout_width="@dimen/_102pxh">
+                        <LinearLayout
+                            android:id="@+id/linearColumnmonthTwo"
+                            android:layout_gravity="start"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_24pxh"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_4pxv"
+                            android:paddingEnd="@dimen/_14pxh"
+                            android:paddingStart="@dimen/_14pxh"
+                            android:paddingTop="@dimen/_4pxv" style="@style/groupStyleindigo_A700cornerRadius">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtMonthTwo"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/_1pxv"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{statsVM.statsModel.txtMonthTwo}"
+                                style="@style/txtMontserratromanregular14_2" tools:text="@string/lbl_month"/>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:id="@+id/btnCalendario"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingBottom="@dimen/_5pxv"
+                            android:paddingEnd="@dimen/_12pxh"
+                            android:paddingStart="@dimen/_12pxh"
+                            android:paddingTop="@dimen/_5pxv"
+                            android:singleLine="true"
+                            android:text="@string/lbl_calendario"
+                            android:textAllCaps="false"
+                            style="@style/btnSolid" tools:text="@string/lbl_calendario"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

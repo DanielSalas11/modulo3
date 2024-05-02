@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="twoRowModel" type="com.danielsapplication.app.modules.statstwo.data.model.TwoRowModel"/>
+    </data>
+    <ImageView android:id="@+id/imageImage"
+        android:layout_height="@dimen/_20pxv"
+        android:layout_width="match_parent" android:scaleType="fitXY"
+        android:src="@drawable/img_image_1"
+        tools:ignore="ContentDescription" tools:src="@drawable/img_image_1"/>
+</layout>
