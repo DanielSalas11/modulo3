@@ -12,12 +12,12 @@ def glideVersion = '4.11.0'
 
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 34
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.danielsapplication.app"
-        minSdkVersion 23
+        minSdkVersion 24
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
@@ -71,6 +71,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     implementation "com.github.bumptech.glide:glide:$glideVersion"
+    implementation 'androidx.activity:activity:1.8.0'
     annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
     implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.2'
 
@@ -80,5 +81,7 @@ dependencies {
 
     implementation("androidx.security:security-crypto:1.0.0")
     implementation "com.airbnb.android:lottie:3.4.0"
+
+    implementation ("com.applandeo:material-calendar-view:1.9.2")
 
 }
