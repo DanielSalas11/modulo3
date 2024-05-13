@@ -8,9 +8,51 @@
     android:layout_height="match_parent"
     tools:context=".Calendario">
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textSize="24sp"
+        android:text="Calendario"
+        android:textColor="@color/black"
+
+        />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <!--        <Button-->
+        <!--            android:id="@+id/btnStatsWeek"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginEnd="10dp"-->
+        <!--            android:text="Week" />-->
+
+        <Button
+            android:id="@+id/btnStatsMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Mes"
+            />
+
+        <Button
+            android:id="@+id/btnStatsYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Año" />
+    </LinearLayout>
+
+
     <com.applandeo.materialcalendarview.CalendarView
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content" />
 
     <LinearLayout
@@ -25,19 +67,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calendario"
-            android:layout_marginEnd="50dp"
             />
 
-        <Button
-            android:id="@+id/btnStats"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Estadisticas"
-            />
+        <!--        <Button-->
+        <!--            android:id="@+id/btnStats"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Estadisticas"-->
+        <!--            />-->
 
     </LinearLayout>
-
-
-
 
 </LinearLayout>

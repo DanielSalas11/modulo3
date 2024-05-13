@@ -16,6 +16,9 @@
         android:theme="@style/Theme.MyApp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".GraficaBarras"
+            android:exported="false" />
+        <activity
             android:name=".DescripcionDia"
             android:exported="false" />
         <activity
@@ -27,20 +30,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".modules.screeninfo.ui.ScreeninfoActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".modules.statsone.ui.StatsOneActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".modules.statscalendar.ui.StatscalendarActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
-        </activity>
-
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".modules.stats.ui.StatsActivity"
             android:screenOrientation="portrait" />

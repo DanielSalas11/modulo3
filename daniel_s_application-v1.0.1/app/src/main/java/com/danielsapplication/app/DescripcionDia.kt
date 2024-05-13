@@ -29,12 +29,20 @@ class DescripcionDia : AppCompatActivity() {
         }
 
 
-
         val btnCalendar = findViewById<Button>(R.id.btnCalendar)
         btnCalendar.setOnClickListener { v ->
             val intent = Intent(v.context, Calendario::class.java)
             startActivity(intent)
         }
+
+        val btnStats = findViewById<Button>(R.id.btnStats)
+        btnStats.setOnClickListener { v ->
+            val intent = Intent(v.context, GraficaBarras::class.java)
+            val emocionesArray = emocionesDelDia?.toTypedArray()
+            intent.putExtra("emocionesDelDia", emocionesArray)
+            startActivity(intent)
+        }
+
     }
 
     private fun llenarListaEmocionesDia() {

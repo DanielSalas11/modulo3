@@ -42,10 +42,8 @@ public class Calendario extends AppCompatActivity {
         emociones.add(new Emocion("Felicidad", 50, R.drawable.img_image_1,"Ejercicio","2024/05/07"));
         emociones.add(new Emocion("Preocupado", 100, R.drawable.img_image_4,"No sale la tarea D:","2024/05/07"));
         emociones.add(new Emocion("Felicidad", 100, R.drawable.img_image_1,"Ya salio la tarea :D","2024/05/08"));
-        emociones.add(new Emocion("Felicidad", 100, R.drawable.img_image_1,"Ya salio la tarea :D","2024/05/09"));
-        emociones.add(new Emocion("Felicidad", 100, R.drawable.img_image_1,"Ya salio la tarea :D","2024/05/09"));
-
-
+        emociones.add(new Emocion("Prueba", 100, R.drawable.img_image_1,"Ya salio la tarea :D","2024/04/08"));
+        emociones.add(new Emocion("Prueba2", 100, R.drawable.img_image_1,"Ya salio la tarea :D","2024/04/08"));
 
 
         Map<String, List<Emocion>> emocionesPorFecha = new HashMap<>();
@@ -91,7 +89,7 @@ public class Calendario extends AppCompatActivity {
                 intent.putExtra("EmocionesDia", (Serializable) emocionesDelDia);
                 startActivity(intent);
             } else {
-                Toast.makeText(this, "No hay enventos registrados", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "No hay emociones registradas", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -105,7 +103,100 @@ public class Calendario extends AppCompatActivity {
             }
         });
 
+//        Button btnStats = findViewById(R.id.btnStats);
+//        btnStats.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(v.getContext(), GraficaBarras.class);
+//                intent.putExtra("EmocionesUsuario", new ArrayList<>(emociones));
+//                startActivity(intent);
+//            }
+//        });
+
+//        Button btnStatsWeek = findViewById(R.id.btnStatsWeek);
+//        btnStatsWeek.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(v.getContext(), GraficaBarras.class);
+//
+//                startActivity(intent);
+//
+//                System.out.println(calendarView.getCurrentPageDate().get);
+//            }
+//        });
+
+        Button btnStatsMonth = findViewById(R.id.btnStatsMonth);
+        btnStatsMonth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), GraficaBarras.class);
+
+                int mesActual = calendarView.getCurrentPageDate().get(Calendar.MONTH) + 1;
+                String añoActual = String.valueOf(calendarView.getCurrentPageDate().get(Calendar.YEAR));
+                String mesFormateado = String.format("%02d", mesActual);
+
+                List<Emocion> emocionesMes = getEmocionesPorMesYAnio(emociones, mesFormateado, añoActual);
+                if (emocionesMes.isEmpty()) {
+                    Toast.makeText(v.getContext(), "No hay emociones para el mes", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                intent.putExtra("MesActual", mesFormateado);
+                intent.putExtra("AñoActual", añoActual);
+                intent.putExtra("EmocionesUsuario", new ArrayList<>(emocionesMes));
+
+                startActivity(intent);
+            }
+        });
+
+        Button btnStatsYear = findViewById(R.id.btnStatsYear);
+        btnStatsYear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), GraficaBarras.class);
+
+                String añoActual = String.valueOf(calendarView.getCurrentPageDate().get(Calendar.YEAR));
+
+                List<Emocion> emocionesAnio = getEmocionesPorAnio(emociones, añoActual);
+                if (emocionesAnio.isEmpty()) {
+                    Toast.makeText(v.getContext(), "No hay emociones para el año", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                intent.putExtra("AnioActual", añoActual);
+                intent.putExtra("EmocionesUsuario", new ArrayList<>(emocionesAnio));
+                startActivity(intent);
+            }
+        });
+
 
     }
+
+
+    private List<Emocion> getEmocionesPorMesYAnio(List<Emocion> emociones, String mes, String anio) {
+        List<Emocion> emocionesFiltradas = new ArrayList<>();
+        for (Emocion emocion : emociones) {
+            String[] fechaParts = emocion.getFecha().split("/");
+            String emocionMes = fechaParts[1];
+            String emocionAnio = fechaParts[0];
+            if (emocionMes.equals(mes) && emocionAnio.equals(anio)) {
+                emocionesFiltradas.add(emocion);
+            }
+        }
+        return emocionesFiltradas;
+    }
+
+    private List<Emocion> getEmocionesPorAnio(List<Emocion> emociones, String anio) {
+        List<Emocion> emocionesFiltradas = new ArrayList<>();
+        for (Emocion emocion : emociones) {
+            String[] fechaParts = emocion.getFecha().split("/");
+            String emocionAnio = fechaParts[0];
+            if (emocionAnio.equals(anio)) {
+                emocionesFiltradas.add(emocion);
+            }
+        }
+        return emocionesFiltradas;
+    }
+
 
 }
