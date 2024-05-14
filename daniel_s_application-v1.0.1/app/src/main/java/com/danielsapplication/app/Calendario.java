@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import java.io.Serializable;
+import java.sql.SQLOutput;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +33,8 @@ public class Calendario extends AppCompatActivity {
 
         ArrayList<Emocion> emociones = new ArrayList<>();
         Usuario usuario = new Usuario("1", "Joshua", emociones);
+
+        emociones.add(new Emocion("Tristeza", 20, R.drawable.img_image_3,"Mucha tarea :c","2024/05/02"));
         emociones.add(new Emocion("Tristeza", 100, R.drawable.img_image_3,"Mucha tarea :c","2024/05/02"));
         emociones.add(new Emocion("Tristeza", 50, R.drawable.img_image_3,"Mucha tarea x2","2024/05/03"));
         emociones.add(new Emocion("Felicidad", 50, R.drawable.img_image_1,"Es viernes :D","2024/05/03"));
@@ -42,9 +45,17 @@ public class Calendario extends AppCompatActivity {
         emociones.add(new Emocion("Felicidad", 50, R.drawable.img_image_1,"Ejercicio","2024/05/07"));
         emociones.add(new Emocion("Preocupado", 100, R.drawable.img_image_4,"No sale la tarea D:","2024/05/07"));
         emociones.add(new Emocion("Felicidad", 100, R.drawable.img_image_1,"Ya salio la tarea :D","2024/05/08"));
-        emociones.add(new Emocion("Prueba", 100, R.drawable.img_image_1,"Ya salio la tarea :D","2024/04/08"));
-        emociones.add(new Emocion("Prueba2", 100, R.drawable.img_image_1,"Ya salio la tarea :D","2024/04/08"));
 
+        emociones.add(new Emocion("Prueba", 100, R.drawable.img_image_1,"Ya salio la tarea :D","2024/04/08"));
+        emociones.add(new Emocion("Prueba", 100, R.drawable.img_image_1,"Ya salio la tarea :D","2024/04/08"));
+        emociones.add(new Emocion("Prueba", 10, R.drawable.img_image_1,"Ya salio la tarea :D","2024/05/14"));
+        emociones.add(new Emocion("Prueba", 70, R.drawable.img_image_1,"Ya salio la tarea :D","2024/05/15"));
+
+        emociones.add(new Emocion("Prueba2", 10, R.drawable.img_image_1,"Ya salio la tarea :D","2024/04/01"));
+        emociones.add(new Emocion("Prueba2", 100, R.drawable.img_image_1,"Ya salio la tarea :D","2024/04/08"));
+        emociones.add(new Emocion("Prueba2", 50, R.drawable.img_image_1,"Ya salio la tarea :D","2024/04/09"));
+        emociones.add(new Emocion("Prueba2", 50, R.drawable.img_image_1,"Ya salio la tarea :D","2024/04/19"));
+        emociones.add(new Emocion("Prueba2", 50, R.drawable.img_image_1,"Ya salio la tarea :D","2024/04/01"));
 
         Map<String, List<Emocion>> emocionesPorFecha = new HashMap<>();
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");

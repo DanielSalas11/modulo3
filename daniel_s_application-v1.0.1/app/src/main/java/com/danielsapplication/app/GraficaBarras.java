@@ -3,6 +3,7 @@ package com.danielsapplication.app;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,9 +15,13 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.github.mikephil.charting.highlight.Highlight;
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -25,13 +30,16 @@ import java.util.Map;
 
 public class GraficaBarras extends AppCompatActivity {
 
+
     BarChart barChart;
     ArrayList<Emocion> emocionesArrayList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grafica_barras);
+
 
         barChart = findViewById(R.id.barchart);
 
@@ -65,6 +73,7 @@ public class GraficaBarras extends AppCompatActivity {
                 ArrayList<String> labelsName = new ArrayList<>();
 
                 int index = 0;
+
                 for (Map.Entry<String, Integer> entry : countByEmotion.entrySet()) {
                     labelsName.add(entry.getKey());
                     barEntries.add(new BarEntry(index++, entry.getValue()));
@@ -90,8 +99,25 @@ public class GraficaBarras extends AppCompatActivity {
 
                 barChart.animateY(1000);
                 barChart.invalidate();
-            }
 
+                barChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
+                    @Override
+                    public void onValueSelected(Entry e, Highlight h) {
+                        Intent intent = new Intent(GraficaBarras.this, GraficaLineas.class);
+                        String emocionSeleccionadaMes = labelsName.get((int) h.getX());
+                        intent.putExtra("EmocionSeleccionada", emocionSeleccionadaMes);
+                        intent.putExtra("EmocionMes", emocionesFiltradas);
+
+
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public void onNothingSelected() {
+                    }
+                });
+
+            }
 
         } else {
         }
@@ -115,6 +141,7 @@ public class GraficaBarras extends AppCompatActivity {
             ArrayList<String> labelsName = new ArrayList<>();
 
             int index = 0;
+
             for (Map.Entry<String, Integer> entry : countByEmotion.entrySet()) {
                 labelsName.add(entry.getKey());
                 barEntries.add(new BarEntry(index++, entry.getValue()));
@@ -140,6 +167,26 @@ public class GraficaBarras extends AppCompatActivity {
 
             barChart.animateY(1000);
             barChart.invalidate();
+
+            List<Emocion> finalEmocionesDelDia = emocionesDelDia;
+            barChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
+                @Override
+                public void onValueSelected(Entry e, Highlight h) {
+                    Intent intent = new Intent(GraficaBarras.this, GraficaLineas.class);
+
+                    String emocionSeleccionadaDia = labelsName.get((int) h.getX());
+                    intent.putExtra("EmocionSeleccionada", emocionSeleccionadaDia);
+                    intent.putExtra("EmocionesDia", (Serializable) finalEmocionesDelDia);
+
+                    startActivity(intent);
+                }
+
+                @Override
+                public void onNothingSelected() {
+                }
+            });
+
+        } else {
         }
 
         // Logica para que ponga la grafica de barra del año
@@ -168,6 +215,7 @@ public class GraficaBarras extends AppCompatActivity {
                 ArrayList<String> labelsName = new ArrayList<>();
 
                 int index = 0;
+
                 for (Map.Entry<String, Integer> entry : countByEmotion.entrySet()) {
                     labelsName.add(entry.getKey());
                     barEntries.add(new BarEntry(index++, entry.getValue()));
@@ -193,9 +241,26 @@ public class GraficaBarras extends AppCompatActivity {
 
                 barChart.animateY(1000);
                 barChart.invalidate();
+
+                barChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
+                    @Override
+                    public void onValueSelected(Entry e, Highlight h) {
+                        Intent intent = new Intent(GraficaBarras.this, GraficaLineas.class);
+
+                        String emocionSeleccionadaAño = labelsName.get((int) h.getX());
+                        intent.putExtra("EmocionSeleccionada", emocionSeleccionadaAño);
+                        intent.putExtra("EmocionesAño", emocionesFiltradasAño);
+
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public void onNothingSelected() {
+                    }
+                });
+
             }
-        }
-        else {
+        }else {
         }
 
     }

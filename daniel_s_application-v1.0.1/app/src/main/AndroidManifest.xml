@@ -16,6 +16,15 @@
         android:theme="@style/Theme.MyApp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".GraficaLineas"
+            android:exported="false" />
+        <activity
+            android:name=".modules.GraficaLineas"
+            android:exported="false" />
+        <activity
+            android:name=".GraficasLineas"
+            android:exported="false" />
+        <activity
             android:name=".GraficaBarras"
             android:exported="false" />
         <activity
@@ -39,7 +48,7 @@
         <activity
             android:name=".modules.statscalendar.ui.StatscalendarActivity"
             android:exported="false"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".modules.stats.ui.StatsActivity"
             android:screenOrientation="portrait" />
